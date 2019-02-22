@@ -1,0 +1,36 @@
+.disease-detail__header {
+  div {
+    position: relative;
+    height: 80vw;
+    min-height: 100vh;
+
+    &::before {
+      @include bg-circle(48vw, $color-blue);
+
+      @include mappy-query(portable) {
+        @include size(80vw);
+      }
+    }
+
+    img {
+      @extend %centralize;
+      top: 35%;
+      width: 40vw;
+      z-index: 1;
+
+      @include mappy-query(portable) {
+        width: 72vw;
+      }
+    }
+
+    h1 {
+      @extend %centralize;
+      @extend %h1;
+      top: 68%;
+      text-transform: capitalize;
+      text-align: center;
+      width: calc(100% - 40px);
+      z-index: 2;
+    }
+  }
+}

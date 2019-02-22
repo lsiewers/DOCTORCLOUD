@@ -1,0 +1,31 @@
+.lang-item {
+  position: absolute;
+  right: 100px;
+  line-height: 90px;
+  z-index: map-get($z-index, nav);
+  list-style: none;
+
+  a {
+    color: white; 
+    font-size: .6em;
+
+    .color--blue &,
+    body[class*=test] &, {
+      color: $color-blue;
+    }
+
+    .menu--open & {
+      color: $color-blue !important;
+    }
+
+
+    @include mappy-query(portable) {
+      body[class*=test] &,
+      .test &,
+      .page-form &,
+      body[class*=contact] & {
+        color: white;
+      }
+    }
+  }
+}

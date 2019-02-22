@@ -1,0 +1,91 @@
+.wpt_test .wpt_test_form .answer {
+  @include size(calc(50vw - 120px), 9vh);
+  @extend %flex-center;
+  float: right;
+  color: white;
+  background-color: $color-blue;
+  border-radius: 40px;
+  margin: 2vh 20px;
+  text-transform: uppercase;
+  clear: both;
+  font-size: 1em;
+  position: relative;
+  padding-left: .3em;
+
+  &.is--active {
+    transform: scale(1.1);
+  }
+
+  .is--wifi & {
+    background-color: transparent;
+    text-align: center;
+    margin: 16px 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      z-index: -1;
+      border-top-color: $color-blue !important;
+      border: 60px solid transparent;
+    }
+
+    &::before { @include circle(32rem); }
+    &:nth-child(3)::before { @include size(21rem) }
+    &:nth-child(4)::before { @include size(10rem) }
+    &:nth-child(5)::before { @include size(0) }
+
+    &:last-child::before {
+      border: none;
+      background-color: $color-blue;
+      @include size(60px);
+    }
+
+    @include mappy-query(portable) {
+      padding-left: 0; 
+      margin: 16px 0;
+    }
+  }
+
+  @include mappy-query(portable) {
+    width: calc(100% + 20px);
+    margin-left: 10px;
+    margin-right: 0;
+    min-height: 60px;
+    align-items: center;
+  }
+  
+  label { 
+    font-size: 1.2em;
+    font-weight: 900; 
+    padding: 10px 18px;
+    line-height: 1.2;
+  }
+
+  &, label { cursor: pointer; }
+
+  input { display: none }
+  input:before {
+    @include size;
+    content: '';
+    display: none;
+    border: 3px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  input:checked {
+    &:before {
+      display: block !important;
+    }
+  }
+}
+
+.wpt_test_form .question div:nth-child(2) {
+  margin-top: 15vh;
+
+  @include mappy-query(portable) {
+    margin-top: 500px;
+  }
+}

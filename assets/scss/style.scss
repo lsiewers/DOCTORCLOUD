@@ -1,0 +1,48 @@
+@import "node_modules/mappy-breakpoints/mappy-breakpoints";
+
+@import 'utils/all';
+@import 'core/all';
+@import 'pages/all';
+@import 'test/all';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: $color-blue;
+
+  &.menu--open {
+    overflow-y: hidden;
+  }
+}
+
+body, ul, figure, button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button, a, input[type='submit'] {
+  appearance: none;
+  background: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h1, h2, h3, h4, h5, h6, a, button, figcaption {
+  font-family: $font-title;
+}
+
+p {
+  font-family: $font-text;
+  color: $color-blue;
+  line-height: 1.6;
+  font-weight: 500;
+}

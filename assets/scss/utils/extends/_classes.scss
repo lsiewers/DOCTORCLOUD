@@ -1,0 +1,18 @@
+.offscreen {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6 & 7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.is--loading {
+  opacity: 0;
+}
+
+.is--loaded {
+  animation: imgFade .2s ease-in forwards;
+}
+
+@keyframes imgFade {
+  from {opacity: 0}
+  to {opacity: 1}
+}

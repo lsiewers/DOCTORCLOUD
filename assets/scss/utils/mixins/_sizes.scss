@@ -1,0 +1,11 @@
+@mixin size($width: 100%, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin circle($width: 100%, $height: $width) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  display: block;
+}

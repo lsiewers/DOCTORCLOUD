@@ -1,0 +1,70 @@
+.home__header {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &::before {
+    content: '';
+    @include bg-circle(42vw, white);
+    z-index: 2;
+
+    @include mappy-query(portable) {
+      margin-top: 20px;
+
+      @include mappy-bp(orientation portrait) {
+        @include circle(140vw);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    @include size;
+    display: block;
+    opacity: .75;
+    position: absolute;
+    z-index: 1;
+    background-color: $color-blue;
+  }
+
+  &__background {
+    position: absolute;
+    background-color: $color-blue;
+    z-index: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @extend %centralize;
+    z-index: 2;
+    text-align: center;
+    color: white;
+
+    @include mappy-query(portable) { 
+      padding: 30px 30px 0; 
+      width: 100vw;
+    }
+
+    h1 {
+      @extend %h1;
+    }
+
+    h3 {
+      @extend %h3;
+    }
+
+    .start-test {
+      @extend %start-test;
+      color: white;
+      border-color: white;
+    }
+  }
+  
+}

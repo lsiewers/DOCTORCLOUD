@@ -1,0 +1,95 @@
+.header__menu {
+  @include rel;
+  @include size;
+}
+
+div[class^='menu-'][class$='-container'] {
+  @include size(100vw, 100vh);
+  @extend %flex-center;
+
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: map-get($z-index, nav) - 1;
+  opacity: 0;
+  overflow: auto;
+
+  &::before {
+    @extend %centralize;
+    @include size(80vw, 80vw);
+    
+    content: '';
+    z-index: 0;
+    position: fixed;
+    display: block;
+    background-color: $color-blue;
+    opacity: .2;
+    border-radius: 50%;
+
+
+    @include mappy-query(portable) {
+      @include circle(150vw);
+    }
+  }
+
+  .menu--close & { 
+    animation: menuClose .4s ease-in-out forwards; 
+    display: none;
+  }
+
+  .menu--open & {
+    display: flex;
+    animation: menuOpen .4s ease-in-out forwards;
+  }
+
+  body:not(.menu--close):not(.menu--open) & {
+    display: none;
+  }
+
+  // ul
+  .menu {
+    position: absolute;
+    padding: 40px 0;
+    top: 60px;
+
+    &-item {
+      list-style: none;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+      &.menu-item-object-wpt_test a {
+        @extend %start-test;
+        color: $color-blue;
+        border-color: $color-blue;
+        margin: 0 0 20px;
+        padding: 0;
+
+        &:hover { 
+          background-color: $color-blue; 
+          color: white;
+        }
+      }
+
+      a {
+        @extend %button;
+        font-size: 1.2em;
+
+        &:hover {
+          background-color: rgba($color-blue, .3);
+        }
+      }
+    }
+  }
+}
+
+@keyframes menuOpen {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes menuClose {
+  0% { opacity: 1; display: flex}
+  99% { opacity: 0; }
+  100% { display: none }
+}

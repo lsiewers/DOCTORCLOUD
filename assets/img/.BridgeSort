@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<dirinfo>
+<stack version='1' expanded='false' framerate='2.0' framerateCS6='2.0' >
+<files>
+	<item key='brugselfiebewerkt.jpg20181018203926' />
+	<item key='DSC_0212.jpg20181018203944' />
+</files>
+<properties>
+	<property key='@collectiontype' value='panorama' type='0' />
+	<property key='@timestamp' value='Sun Oct 21 2018 09:18:10 GMT+0200' type='0' />
+</properties>
+</stack>
+<stack version='1' expanded='false' framerate='2.0' framerateCS6='2.0' >
+<files>
+	<item key='juntos.jpg20181018203710' />
+	<item key='overeditduo.jpg20181018203710' />
+</files>
+<properties>
+	<property key='@collectiontype' value='panorama' type='0' />
+	<property key='@timestamp' value='Sun Oct 21 2018 09:18:10 GMT+0200' type='0' />
+</properties>
+</stack>
+</dirinfo>

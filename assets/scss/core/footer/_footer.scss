@@ -1,0 +1,21 @@
+.footer {
+  font-family: $font-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  position: relative;
+
+  body[class*=test] & { @include abs(null, 0, 0, null); }
+
+  small {
+    font-size: .6em;
+    
+    a { 
+      color: $color-blue;
+      text-transform: none;
+      font-weight: normal;
+    }
+  }
+}

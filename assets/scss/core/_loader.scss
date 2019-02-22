@@ -1,0 +1,20 @@
+.loader {
+  @include size;
+  @include fxd(0, null, null, 0);
+
+  background-color: white;
+  z-index: 100;
+  will-change: opacity;
+  transition: opacity ease-out .2s;
+  pointer-events: none;
+
+  img {
+    @extend %centralize;
+    
+    width: 80vw;
+  }
+
+  .load--complete & {
+    opacity: 0 !important;
+  }
+}

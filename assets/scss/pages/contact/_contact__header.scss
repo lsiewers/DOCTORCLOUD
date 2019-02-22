@@ -1,0 +1,60 @@
+.contact__header {
+  overflow: hidden;
+
+  @include mappy-query(desktop) {
+    @include size(50vw, 100vh);
+    @include fxd(0, null, null, 0);
+    z-index: 1;
+  }
+
+  @include mappy-query(portable) {
+    position: relative;
+    @include size(100vw, 60vh);
+  }
+
+  &__background {
+    @include size;
+    background-color: $color-blue;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      @include size;
+      display: block;
+      opacity: .75;
+      position: absolute;
+      z-index: 1;
+      background-color: $color-blue;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__content {
+    @include abs(0, null, null, 0);
+    @include size;
+    @extend %flex-center;
+    z-index: 10;
+
+    &::before {
+      @include bg-circle(calc(50vw - 80px), white); 
+
+      @include mappy-query(portable) {
+        @include size(80vw);
+      }
+    }
+
+    h1 {
+      @extend %h1;
+      position: relative;
+      z-index: 10;
+      color: white;
+    }
+  }
+}

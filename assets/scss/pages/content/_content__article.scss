@@ -1,0 +1,139 @@
+
+.content__article {
+  position: relative;
+  margin: 0;
+  padding: 80px 5vw 0;
+  min-height: 56vw;
+
+  @include mappy-query(tablet) {
+    padding-bottom: 130vw;
+    min-height: 130vh;
+  }
+
+  @include mappy-query(phone) {
+    padding-bottom: 160vw;
+    min-height: 160vh;
+  }
+
+  &::before {
+    content: '';
+    @include circle(56vw);
+    @include abs(6vw);
+    background-color: $color-blue;
+    opacity: .2;
+    z-index: 10;
+
+    @include mappy-query(tablet) {
+      @include circle(100vw);
+      top: 45vw;
+    }
+
+    @include mappy-query(phone) {
+      @include circle(220vw);
+      top: 80vw;
+    }
+  }
+
+  figure {
+    @include circle(36vw);
+    position: absolute;
+    overflow: hidden;
+    align-self: flex-start;
+
+    @include mappy-query(tablet) { @include circle(50vw); }
+    @include mappy-query(phone) { @include circle(90vw); }
+
+    img {
+      position: absolute;
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    width: 44vw;
+    z-index: 12;
+    align-self: flex-end;
+    position: absolute;
+    top: 14vw;
+    padding: 10px 20px 0 6vw; 
+
+    h1 { 
+      @extend %h2;
+      margin-bottom: .5em; 
+    }
+    p { margin: 0; }
+
+    @include mappy-query(tablet) { width: 70vw; }
+
+    @include mappy-query(phone) {
+      width: 100%;
+      padding: 0 30px;
+      top: 120vw;
+
+      a {
+        @include rel(null, null, null, 50%);
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    &::before { right: 8vw; }
+    .content__article__text { right: 15vw }
+    figure { 
+      left: 6vw; 
+      
+      img { left: 0; }
+    }
+    
+    @include mappy-query(tablet) {
+      &::before { right: -8vw; }
+      .content__article__text { 
+        top: 62vw; 
+        right: 10vw;
+      }
+    }
+
+    @include mappy-query(phone) {
+      &::before { right: -80vw; }
+      .content__article__text { right: 0; }
+      figure { left: -10vw; }
+    }
+  }
+
+  &:nth-child(odd) {
+    &::before, 
+    .content__article__text { 
+      align-self: flex-start; 
+      left: 12vw;
+    }
+
+    &::before { left: 8vw }
+
+    figure { 
+      right: 6vw;
+      align-self: flex-end;
+
+      img { right: 0; }
+    }
+    
+    @include mappy-query(tablet) {
+      &::before { left: -8vw; }
+      .content__article__text { 
+        left: 5vw; 
+        top: 60vw;
+      }
+    }
+
+    @include mappy-query(phone) {
+      &::before { left: -80vw; }
+      .content__article__text { left: 0; }
+      figure { right: -20vw; }
+    }
+  }
+}

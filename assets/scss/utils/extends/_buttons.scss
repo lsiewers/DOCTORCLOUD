@@ -1,0 +1,51 @@
+
+
+%start-test {
+  @include circle(210px);
+  @extend %centralize-horizontal;
+
+  position: relative;
+  border: solid 6px;
+  text-align: center;
+  line-height: 210px;
+  margin-top: 40px;
+  transition: 
+    background-color .2s ease-in-out,
+    color .2s ease-in-out;
+
+  &:hover { 
+    background-color: white; 
+    color: $color-blue;
+  }
+}
+
+%button {
+  text-align: center;
+  padding: 20px 24px 16px;
+  color: $color-blue;
+  margin-top: 20px;
+  white-space: nowrap;
+  border-radius: calc(1em + 24px);
+  transition: background-color .2s ease-in-out;
+  background-color: transparent;
+  line-height: 1.6;
+
+  &:hover { background-color: rgba($color-blue, 0.2); }
+}
+
+.button { @extend %button }
+
+%button-outline {
+  @extend %button;
+  border: solid .3em $color-blue;
+  transition: 
+    background-color .2s ease-in-out,
+    color .2s ease-in-out;
+
+  &:hover { 
+    background-color: $color-blue; 
+    color: white;
+  }
+}
+
+.button-outline { @extend %button-outline }

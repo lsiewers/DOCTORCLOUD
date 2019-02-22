@@ -1,0 +1,23 @@
+
+.home__diseases {
+  background: $color-blue;
+  color: white;
+
+  &::before {
+    background-color: white !important;
+  }
+
+  .about__article__text p,
+  .about__article__text a {
+    color: white;
+  }
+
+  .about__article__text a {
+    border-color: white;
+
+    &:hover { 
+      background-color: white; 
+      color: $color-blue;
+    }
+  }
+}

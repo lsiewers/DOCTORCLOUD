@@ -1,0 +1,43 @@
+
+
+.wpt_test_form .question div.title {
+  @extend %centralize-vertical;
+  color: white;
+  display: inline-block;
+  width: calc(50% - 120px);
+  
+  span.title { 
+    @extend %h2; 
+
+    @include mappy-query(portable) {
+      font-size: 1.4em;
+    }
+  }
+
+
+  @include mappy-query(portable) {
+    width: calc(100% - 80px);
+    top: calc(50% + 30px);
+  }
+
+  // &::before {
+  //   @extend %centralize;
+  //   content: '?';
+  //   font-size: 7em;
+  //   color: white;
+  //   opacity: .2;
+  //   line-height: 1;
+  //   margin-top: .1em;
+  // }
+
+  .number {
+    display: none !important;
+  }
+
+}
+
+.wpt_test_form .question.is--wifi {
+  @include mappy-query(desktop) {
+    overflow: hidden;
+  }
+}

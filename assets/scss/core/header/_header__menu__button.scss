@@ -1,0 +1,48 @@
+.header__menu__button {
+  @include abs(24px, 30px);
+  z-index: map-get($z-index, nav); 
+  
+  .menu--open & {
+    top: 30px;
+    right: 24px;
+  }
+
+  .line {
+    @include size(40px, 5px);
+
+    position: relative;
+    z-index: 1;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    margin: 6px auto;
+    transform-origin: center center;
+
+    .menu--open & {
+      background-color: $color-blue !important;
+
+      &:nth-child(2) {
+        display: none;
+      }
+      &:first-child {
+        transform: rotate(45deg) translateY(7px);
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateY(-7px);
+      }
+    }
+
+    .color--blue &,
+    body[class*=test] &, {
+      background-color: $color-blue;
+    }
+  }
+
+  @include mappy-query(portable) {
+    body[class*=test] &,
+    .page-form &,
+    body[class*=contact] & {
+      .line { background-color: white; }
+    }
+  }
+}

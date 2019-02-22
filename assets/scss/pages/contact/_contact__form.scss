@@ -1,0 +1,39 @@
+.contact > p {
+  padding: 120px 40px 0;
+  text-align: center;
+
+  @include mappy-query(portable) { padding-top: 80px }
+}
+
+.wpcf7 {
+  padding: 60px 30px !important;
+
+  input[type='text'], input[type='email'], textarea, select {
+    background-color: rgba($color-blue, .2);
+    -webkit-appearance: none;
+    border: none;
+    font-size: 1.2em;
+    padding: 18px 24px;
+    margin: 6px 0 20px;
+    border-radius: 30px;
+    width: 100% !important;
+    color: $color-blue;
+    outline: none;
+    resize: vertical;
+  }
+
+  input[type='text'], input[type='email'] { cursor: text }
+  textarea { 
+    resize: vertical;
+    font-family: $font-text;
+  }
+
+  input[type='submit'] {
+    @extend %button-outline;
+    font-size: 1em;
+    float: right;
+  }
+
+  select { cursor: pointer; }
+  select[aria-invalid=false] { font-weight: bold }
+}
