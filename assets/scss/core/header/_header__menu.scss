@@ -1,0 +1,88 @@
+.header__menu {
+  @include rel;
+  @include size;
+}
+
+div[class^='menu-'][class$='-container'] {
+  @include size(100vw, 100vh);
+  @extend %flex-center;
+
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: map-get($z-index, nav) - 1;
+  opacity: 0;
+  overflow: auto;
+
+  &::before {
+    @include bg-circle(80vw);
+    position: fixed;
+
+    @include mappy-query(portable) {
+      @include circle(150vw);
+    }
+  }
+
+  .menu--close & { 
+    animation: menuClose .4s ease-in-out forwards; 
+    display: none;
+  }
+
+  .menu--open & {
+    display: flex;
+    animation: menuOpen .4s ease-in-out forwards;
+  }
+
+  body:not(.menu--close):not(.menu--open) & {
+    display: none;
+  }
+
+  // ul
+  .menu {
+    position: absolute;
+    padding: 60px 0 150px;
+    top: 60px;
+
+    &-item {
+      list-style: none;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+      &.menu-item-object-wpt_test a {
+        @extend %start-test;
+        color: $color-blue;
+        border-color: $color-blue;
+        margin: 0 0 18px;
+        padding: 0;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+
+        &:hover { 
+          background-color: $color-blue; 
+          color: white;
+        }
+      }
+
+      &:not(.menu-item-object-wpt_test) a {
+        @extend %button;
+        background-color: rgba($color-blue, .15);
+        font-size: 1em;
+
+        &:hover {
+          background-color: rgba($color-blue, .33);
+        }
+      }
+    }
+  }
+}
+
+@keyframes menuOpen {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes menuClose {
+  0% { opacity: 1; display: flex}
+  99% { opacity: 0; }
+  100% { display: none }
+}

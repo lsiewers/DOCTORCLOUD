@@ -1,0 +1,28 @@
+.header__logo {
+  @include size(60px);
+
+  @include mappy-query(desktop) {
+    @include abs(30px, null, null, 36px);
+  }
+  @include mappy-query(portable) {
+    @include abs(24px, null, null, 30px);
+  }
+
+  background-image: url(./assets/img/logo/logo_white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: .1px; 
+
+  z-index: map-get($z-index, nav);
+
+  .menu--open & { background-image: url(./assets/img/logo/logo_blue.png) !important; }
+  .color--blue & { background-image: url(./assets/img/logo/logo_blue.png); }
+
+  body[class*=contact] &,
+  .page-form & {
+    background-image: url(./assets/img/logo/logo_white.png);
+  }
+
+  @include mappy-query(portable) { top: 24px; }
+}

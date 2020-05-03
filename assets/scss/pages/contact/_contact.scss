@@ -1,0 +1,4 @@
+main.contact {
+  @include size;
+  @include mappy-query(desktop) { padding-left: 50%; }
+}

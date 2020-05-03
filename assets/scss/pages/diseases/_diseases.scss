@@ -1,0 +1,13 @@
+.diseases {
+  @include size;
+  padding: 80px 40px;
+
+  &__title {
+    @extend .offscreen;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

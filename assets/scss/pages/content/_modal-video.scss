@@ -1,0 +1,46 @@
+.modal-video {
+  @include fxd(0, null, null, 0);
+  @include size;
+
+  display: none;
+  z-index: 100;
+  background-color: black;
+  opacity: 0;
+
+  &.video--open {
+    animation: modalOpen .4s ease-in forwards;
+
+    &, & + button { display: block;}
+  }
+
+  & + button  {
+    @extend %button;
+    @include fxd(3px, 24px, null, null);
+    z-index: 101;
+    display: none;
+
+    .line {
+      @include size(40px, 5px);
+
+      background-color: $color-blue;
+      border-radius: 10px;
+      margin: 6px auto;
+      transform-origin: center center;
+
+
+      &:first-child {
+        transform: rotate(45deg) translateY(7px);
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateY(-7px); 
+      }
+    }
+  }
+}
+
+
+
+@keyframes modalOpen {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}

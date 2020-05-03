@@ -1,0 +1,75 @@
+.header__menu__button {
+  z-index: map-get($z-index, nav); 
+  @extend %button;
+  @include size(90px, 78px);
+  transition: width .2s ease-in;
+
+  @include mappy-query(desktop) {
+    @include abs(3px, 24px);
+  }
+  @include mappy-query(portable) {
+    @include abs(0px, 12px);
+  }
+
+  .menu--open & {
+    width: 78px;
+  }
+
+  .line {
+    @include size(40px, 5px);
+
+    position: relative;
+    z-index: 1;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    margin: 6px auto;
+    transform-origin: center center;
+    will-change: transform;
+
+    &:nth-child(2) {
+      transition-property: opacity, transform, height;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in;
+      transition-delay: height 0.1s;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &:not(:nth-child(2)) {
+      transition: transform .2s ease-in;
+    }
+
+    .menu--open & {
+      background-color: $color-blue !important;
+
+      &:nth-child(2) {
+        transition-property: opacity, transform, height;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;   
+        opacity: 0;
+        height: 0px;
+        transform: scale(0);
+      }
+      &:first-child {
+        transform: rotate(45deg) translateY(7px);
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateY(-7px);
+      }
+    }
+
+    .color--blue &,
+    body[class*=test] & {
+      background-color: $color-blue;
+    }
+  }
+
+  @include mappy-query(portable) {
+    body[class*=test] &,
+    .page-form &,
+    body[class*=contact] & {
+      .line { background-color: white; }
+    }
+  }
+}

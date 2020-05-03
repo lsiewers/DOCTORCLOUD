@@ -1,0 +1,25 @@
+.wpt_test_form p input[type='submit'] {
+  @extend %button;
+
+  @include mappy-query(desktop) {
+    @include fxd(null, 48px, 40px, null);
+  }
+  @include mappy-query(portable) {
+    @include fxd(null, 24px, 30px, null);
+  }
+
+  opacity: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 900;
+  z-index: 99;
+  outline: none;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  background-image: radial-gradient(white, $color-blue-light);
+}
+
+.answered + p input[type='submit'] {
+  opacity: 1;   
+}

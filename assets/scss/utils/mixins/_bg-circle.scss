@@ -1,0 +1,8 @@
+@mixin bg-circle($size) {
+  content: '';
+  @extend %centralize;
+  @include circle($size);
+  background-image: radial-gradient(white, rgba($color-blue, 0.4));
+  display: block;
+  z-index: 0;
+}

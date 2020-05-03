@@ -1,0 +1,28 @@
+.diseases__list__item {
+  list-style: none;
+  width: 50%;
+  padding: 40px;
+  margin: 20px 0;
+  
+  @include mappy-query(portable) {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  figure {
+    img { width: 100%; }
+  }
+
+  h1 { 
+    @extend %h2;
+    margin-bottom: 0;
+  }
+
+  a {
+    @extend %button-outline;
+    // font-size: .8em;
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+

@@ -1,0 +1,35 @@
+
+.disease-detail__folder {
+  figure {
+    position: relative;
+    width: 100vw;
+    height: auto;
+
+    img { 
+      width: 100%;
+    }
+
+    @include mappy-query(desktop) {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    @include mappy-query(portable) {
+      img {
+        position: relative;
+        width: 300%;
+      }
+
+      &:nth-child(2) img { 
+        left: 50%;  
+        transform: translateX(-50%);
+      }
+
+      &:nth-child(3) img {
+        left: -50%;  
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

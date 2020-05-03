@@ -1,0 +1,6 @@
+.disease-detail__buttons {
+  @extend %flex-center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  color: $color-blue;
+}

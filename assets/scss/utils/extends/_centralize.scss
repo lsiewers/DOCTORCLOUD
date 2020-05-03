@@ -1,0 +1,20 @@
+%centralize {
+  @include abs(50%, null, null, 50%);
+  transform: translate(-50%, -50%);
+}
+
+%centralize-horizontal {
+  @include abs(null, null, null, 50%);
+  transform: translateX(-50%);
+}
+
+%centralize-vertical {
+  @include abs(50%, null, null, null);
+  transform: translateY(-50%);
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

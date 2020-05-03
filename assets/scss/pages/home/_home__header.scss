@@ -1,0 +1,90 @@
+.home__header {
+  @extend %flex-center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  // &::before {
+  //   content: '';
+  //   @include bg-circle(42vw, white);
+  //   z-index: 2;
+
+  //   @include mappy-query(tablet) {
+
+  //     @include mappy-bp(orientation portrait) {
+  //       @include circle(120vw);
+  //     }
+  //   }
+
+  //   @include mappy-query(phone) {
+  //     margin-top: 20px;
+
+  //     @include mappy-bp(orientation portrait) {
+  //       @include circle(140vw);
+  //     }
+  //   }
+  // }
+
+  &::after {
+    content: '';
+    @include size;
+    display: block;
+    opacity: .8;
+    position: absolute;
+    z-index: 1;
+    background-image: radial-gradient(rgba($color-blue-light, 0.6), $color-blue);
+  }
+
+  &__background {
+    position: absolute;
+    background-color: $color-blue;
+    z-index: 0;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+
+    img {
+      position: absolute;
+      width: 100%;
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    // @extend %centralize;
+    z-index: 2;
+    text-align: center;
+    color: white;
+
+    @include mappy-query(desktop) {
+      padding: 90px 48px; 
+    }
+
+    @include mappy-query(portable) { 
+      padding: 72px 24px 48px; 
+      width: 100vw;
+    }
+
+    h1 {
+      @extend %h1;
+      text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    h3 {
+      font-family: $font-text;
+      font-weight: 900;
+      font-size: 1.8em;
+      // text-transform: uppercase;
+      margin-bottom: 2.5em;
+      text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .start-test {
+      @extend %start-test;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+}

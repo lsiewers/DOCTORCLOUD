@@ -1,0 +1,41 @@
+%title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+%h1 {
+  @include mappy-query(portable) { font-size: 4.8em; }
+  @include mappy-query(desktop) { font-size: 6em; }
+  @extend %title;
+  line-height: .8;
+  margin-bottom: 0;
+}
+
+%h2 {
+  @include mappy-query(portable) { font-size: 2.4em; }
+  @include mappy-query(desktop) { font-size: 3.2em; }
+  @extend %title;
+  line-height: 1;
+}
+
+%h3 {
+  @include mappy-query(portable) { font-size: 1.8em; }
+  @include mappy-query(desktop) { font-size: 2.4em; }
+  @extend %title;
+  font-size: 1.5em;
+}
+
+%h4 {
+  @extend %title;
+  font-size: 1.4em;
+}
+
+%h5 {
+  @extend %title;
+  font-size: 1.2em;
+}
+
+%h6 {
+  @extend %title;
+  font-size: 1em;
+}

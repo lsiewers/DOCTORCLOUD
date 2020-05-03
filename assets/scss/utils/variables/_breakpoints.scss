@@ -1,0 +1,15 @@
+$breakpoints: (
+  'small'     : 480px,
+  'med'       : 780px,
+  'large'     : 920px,
+  'wide'      : 1200px,
+  'mega'      : 1400px,
+  // ...
+);
+
+$mappy-queries: (
+  phone: mappy-bp(max small), // media all and (max-height: 29.9375em)
+  tablet: mappy-bp(small med), // @media all and (min-width 30em) and (max-width: 49.375em)
+  desktop: mappy-bp(med), // media all and (min-width: 60em) and (max-width: 74.9375em)
+  portable: mappy-bp(max med) // media screen and (min-width: 30em)
+)

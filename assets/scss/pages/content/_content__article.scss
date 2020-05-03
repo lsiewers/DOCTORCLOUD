@@ -1,0 +1,108 @@
+
+.content__article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  // &::before {
+  //   content: '';
+  //   background-color: $color-blue;
+  //   opacity: .2;
+  //   z-index: 10;
+  //   margin-top: -120px;
+  // }
+
+  figure {
+    @extend %flex-center;
+    position: relative;
+    overflow: hidden;
+
+    img, video {
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    max-width: 480px;
+    font-size: 1.2em;
+
+    h1 { 
+      @extend %h2;
+      margin: .5em 0; 
+    }
+    // p { margin: 0; }
+  }
+
+
+    
+  @include mappy-query(desktop) {
+    padding: 90px 60px;
+
+    figure {
+      @include circle(480px);
+      min-width: 480px;
+    }
+    // &::before { @include circle(720px); }
+
+    &:nth-child(even) {
+      // &::before { @include abs(unset, 0, unset, unset); }
+      .content__article__text { margin-left: 60px; }
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      // &::before { @include abs(unset, unset, unset, 0); }
+      .content__article__text { margin-right: 60px; }
+    }
+  }
+
+  @include mappy-query(tablet) {
+    padding: 72px 48px;
+    flex-direction: column;
+    // &::before { 
+    //   @include circle(640px);
+    //   @include abs(unset, 50%, 0, 50%); 
+    //   transform: translateX(-50%);
+    // }
+
+    figure { 
+      @include circle(420px);
+      min-width: 420px;
+    }
+
+    .content__article__text { 
+      margin-top: 60px; 
+      width: 100%;
+    }
+  }
+
+  @include mappy-query(phone) {
+    padding: 60px 30px 72px;
+    flex-direction: column;
+    // &::before { 
+    //   @include circle(640px);
+    //   @include abs(unset, 50%, 0, 50%); 
+    //   transform: translateX(-50%);
+    // }
+
+    // &:nth-child(even) figure { @include rel(0, unset, unset, 25%); }
+    // &:nth-child(odd) figure { @include rel(0, 25%, unset, unset); }
+    figure { 
+      @include circle(360px);
+      min-width: 360px;
+      // @include rel(0, 50%, unset, 50%); 
+      // transform: translateX(-50%);
+    }
+    .content__article__text { 
+      margin-top: 60px; 
+      width: 100%;
+    }
+  }
+}
