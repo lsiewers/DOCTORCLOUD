@@ -1,5 +1,4 @@
 .wpt_test_form p input[type='submit'] {
-<<<<<<< HEAD
   @extend %button;
 
   @include mappy-query(desktop) {
@@ -23,21 +22,4 @@
 
 .answered + p input[type='submit'] {
   opacity: 1;   
-=======
-  @include fxd(null, 40px, 40px, null);
-  @extend %button-outline;
-
-  opacity: 0;
-  cursor: pointer;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 900;
-  outline: none;
-  background-color: white;
-  z-index: 99;
-}
-
-.answered + p input[type='submit'] {
-  opacity: 1;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 }

@@ -1,7 +1,6 @@
 
 
 %start-test {
-<<<<<<< HEAD
   @include circle(190px);
   @extend %centralize-horizontal;
 
@@ -22,48 +21,22 @@
   &:hover {
     color: white;
     background-image: radial-gradient($color-blue-light, $color-blue);
-=======
-  @include circle(210px);
-  @extend %centralize-horizontal;
-
-  position: relative;
-  border: solid 6px;
-  text-align: center;
-  line-height: 210px;
-  margin-top: 40px;
-  transition: 
-    background-color .2s ease-in-out,
-    color .2s ease-in-out;
-
-  &:hover { 
-    background-color: white; 
-    color: $color-blue;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   }
 }
 
 %button {
-<<<<<<< HEAD
   font-family: $font-text;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
   padding: 18px 24px;
-=======
-  text-align: center;
-  padding: 20px 24px 16px;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   color: $color-blue;
   margin-top: 20px;
   white-space: nowrap;
   border-radius: calc(1em + 24px);
   transition: background-color .2s ease-in-out;
   background-color: transparent;
-<<<<<<< HEAD
   font-size: .9em;
-=======
-  line-height: 1.6;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 
   &:hover { background-color: rgba($color-blue, 0.2); }
 }

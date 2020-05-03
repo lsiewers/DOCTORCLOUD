@@ -1,15 +1,10 @@
 .wpt_test .wpt_test_form .answer {
-<<<<<<< HEAD
   @extend .button;
-=======
-  @include size(calc(50vw - 120px), 9vh);
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   @extend %flex-center;
   float: right;
   color: white;
   background-color: $color-blue;
   border-radius: 40px;
-<<<<<<< HEAD
   clear: both;
   position: relative;
   white-space: normal;
@@ -39,57 +34,10 @@
 
   @include mappy-query(portable) {
     width: 100%;
-=======
-  margin: 2vh 20px;
-  text-transform: uppercase;
-  clear: both;
-  font-size: 1em;
-  position: relative;
-  padding-left: .3em;
-
-  &.is--active {
-    transform: scale(1.1);
-  }
-
-  .is--wifi & {
-    background-color: transparent;
-    text-align: center;
-    margin: 16px 20px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0px;
-      z-index: -1;
-      border-top-color: $color-blue !important;
-      border: 60px solid transparent;
-    }
-
-    &::before { @include circle(32rem); }
-    &:nth-child(3)::before { @include size(21rem) }
-    &:nth-child(4)::before { @include size(10rem) }
-    &:nth-child(5)::before { @include size(0) }
-
-    &:last-child::before {
-      border: none;
-      background-color: $color-blue;
-      @include size(60px);
-    }
-
-    @include mappy-query(portable) {
-      padding-left: 0; 
-      margin: 16px 0;
-    }
-  }
-
-  @include mappy-query(portable) {
-    width: calc(100% + 20px);
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     margin-left: 10px;
     margin-right: 0;
     min-height: 60px;
     align-items: center;
-<<<<<<< HEAD
     font-size: 1em;
   }
   
@@ -100,15 +48,6 @@
     line-height: 1.2;
     display: block;
     height: 100%;
-=======
-  }
-  
-  label { 
-    font-size: 1.2em;
-    font-weight: 900; 
-    padding: 10px 18px;
-    line-height: 1.2;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   }
 
   &, label { cursor: pointer; }
@@ -137,7 +76,6 @@
   @include mappy-query(portable) {
     margin-top: 500px;
   }
-<<<<<<< HEAD
 }
 
 .wpt_test .wpt_test_form .is--wifi .answer {
@@ -169,6 +107,4 @@
     padding-left: 0; 
     margin-left: 16px;
   }
-=======
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 }

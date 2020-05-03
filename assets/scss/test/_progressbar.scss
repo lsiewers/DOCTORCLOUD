@@ -1,5 +1,4 @@
 .progress {
-<<<<<<< HEAD
   @include abs(130px, null, null, 0);
   z-index: 1;
   color: white;
@@ -12,17 +11,6 @@
   @include mappy-query(portable) {
     width: 100%;
     padding: 0 24px;
-=======
-  @include abs(100px, null, null, 0);
-  z-index: 1;
-  color: white;
-  width: 50%;
-  padding: 0 40px;
-  font-size: .9em;
-
-  @include mappy-query(portable) {
-    width: 100%;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   }
 
   .progressbar {

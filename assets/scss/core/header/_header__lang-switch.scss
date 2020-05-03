@@ -1,17 +1,11 @@
 .lang-item {
   position: absolute;
-<<<<<<< HEAD
   right: 120px;
   top: 36px;
-=======
-  right: 100px;
-  line-height: 90px;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   z-index: map-get($z-index, nav);
   list-style: none;
 
   a {
-<<<<<<< HEAD
     @extend %button;
     margin: 0;
     color: white;
@@ -20,22 +14,11 @@
 
     .color--blue &,
     body[class*=test] {
-=======
-    color: white; 
-    font-size: .6em;
-
-    .color--blue &,
-    body[class*=test] &, {
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
       color: $color-blue;
     }
 
     .menu--open & {
-<<<<<<< HEAD
       opacity: 0;
-=======
-      color: $color-blue !important;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     }
 
 

@@ -10,31 +10,17 @@
   }
 
   figure {
-<<<<<<< HEAD
     img { width: 100%; }
   }
 
   h1 { 
     @extend %h2;
-=======
-    img {
-      width: 100%;
-    }
-  }
-
-  h1 { 
-    @extend %h1;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     margin-bottom: 0;
   }
 
   a {
     @extend %button-outline;
-<<<<<<< HEAD
     // font-size: .8em;
-=======
-    font-size: .8em;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     max-width: 100%;
     white-space: normal;
   }

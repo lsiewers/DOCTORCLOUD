@@ -6,17 +6,11 @@
 
 
   @include mappy-query(portable) {
-<<<<<<< HEAD
     overflow: hidden;
     height: auto;
     padding-bottom: 80px;
     max-width: 100vw;
     display: block;
-=======
-    overflow-y: auto;
-    height: auto;
-    padding-bottom: 80px;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   }
 
   &::before {
@@ -34,11 +28,7 @@
   }
   
   &::after {
-<<<<<<< HEAD
     // @include bg-circle(calc(50vw - 80px), $color-blue);
-=======
-    @include bg-circle(calc(50vw - 80px), $color-blue);
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     z-index: -1;
 
     @include mappy-query(desktop) {
@@ -83,10 +73,6 @@
 
 .question {
   @include size;
-<<<<<<< HEAD
-=======
-  padding: 40px;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   margin: 0 !important;
   
   // bug fix for generated link inside text
@@ -100,16 +86,11 @@
 
   span.title a { text-transform: none !important; }
 
-<<<<<<< HEAD
   @include mappy-query(desktop) {
     padding: 48px;
   }
   @include mappy-query(portable) {
     position: relative;
     padding: 24px;
-=======
-  @include mappy-query(portable) {
-    position: relative;
->>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   }
 }
