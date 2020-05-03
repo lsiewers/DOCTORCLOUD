@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 @mixin bg-circle($size) {
   content: '';
   @extend %centralize;
   @include circle($size);
   background-image: radial-gradient(white, rgba($color-blue, 0.4));
   display: block;
+=======
+@mixin bg-circle($size, $color) {
+  content: '';
+  @extend %centralize;
+  @include circle($size);
+  background-color: $color;
+  display: block;
+  opacity: .2;
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   z-index: 0;
 }

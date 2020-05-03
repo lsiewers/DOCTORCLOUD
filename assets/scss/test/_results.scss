@@ -9,7 +9,11 @@
   }
 
   &::before {
+<<<<<<< HEAD
     // @include bg-circle(calc(50vw - 80px), white);
+=======
+    @include bg-circle(calc(50vw - 80px), white);
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     left: 25%;
     z-index: -1;
 
@@ -70,11 +74,14 @@
       @include mappy-query(portable) {
         color: white;
         border-color: white;
+<<<<<<< HEAD
 
         &:hover {
           background-color: white;
           color: $color-blue;
         }
+=======
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
       }
     }
 
@@ -114,7 +121,10 @@
     height: 60px !important;
     border-radius: 60px !important;
     padding: 0 !important;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 
     border: none !important;
     display: inline-block;
@@ -127,6 +137,7 @@
       border-bottom-left-radius: 60px !important;
       border-bottom-right-radius: 0 !important;
       border-top-right-radius: 0 !important;
+<<<<<<< HEAD
       transition: opacity ease-in .1s;
     }
     
@@ -140,6 +151,8 @@
       border-radius: 60px;
 
       &:hover ~ span { opacity: 0; }
+=======
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     }
 
     @include mappy-query(portable) {

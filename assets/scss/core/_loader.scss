@@ -1,10 +1,11 @@
 .loader {
   @include size;
   @include fxd(0, null, null, 0);
-  opacity: 1;
+
   background-color: white;
   z-index: 100;
   will-change: opacity;
+  transition: opacity ease-out .2s;
   pointer-events: none;
 
   img {
@@ -14,7 +15,6 @@
   }
 
   .load--complete & {
-    transition: opacity ease-out .2s 1.2s;
     opacity: 0 !important;
   }
 }

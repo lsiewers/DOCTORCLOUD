@@ -5,7 +5,11 @@
     min-height: 100vh;
 
     &::before {
+<<<<<<< HEAD
       @include bg-circle(48vw);
+=======
+      @include bg-circle(48vw, $color-blue);
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 
       @include mappy-query(portable) {
         @include size(80vw);
@@ -15,8 +19,12 @@
     img {
       @extend %centralize;
       top: 35%;
+<<<<<<< HEAD
       max-width: 40vw;
       max-height: 60vh;
+=======
+      width: 40vw;
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
       z-index: 1;
 
       @include mappy-query(portable) {
@@ -27,10 +35,17 @@
     h1 {
       @extend %centralize;
       @extend %h1;
+<<<<<<< HEAD
       top: 60%;
       text-transform: capitalize;
       text-align: center;
       width: 80%;
+=======
+      top: 68%;
+      text-transform: capitalize;
+      text-align: center;
+      width: calc(100% - 40px);
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
       z-index: 2;
     }
   }

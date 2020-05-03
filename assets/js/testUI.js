@@ -90,6 +90,7 @@ function setUI() {
       // create and add contact button
       const contactButton = document.createElement('a');
       const url = window.location.origin;
+      const currentLang = window.location.pathname.split( '/' )[1];
 
       contactButton.setAttribute('href', `${url}/contact-${currentLang == 'en' ? 'en' : 'nl'}`);
       contactButton.classList.add('button-outline');

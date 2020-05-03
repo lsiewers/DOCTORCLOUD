@@ -1,6 +1,10 @@
 <?php /* Template Name: Front page */ ?>
 
+<<<<<<< HEAD
 <?php $logoColor = 'white'; $menuColor = 'white'?>
+=======
+<?php $logoColor = 'white' ?>
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 <?php include 'core/header.php' ?>
 
 <main class="home">
@@ -24,6 +28,7 @@
     </div>
   </header>
 
+<<<<<<< HEAD
     
   <?php
 
@@ -51,6 +56,50 @@
     endwhile;
     endif;
     endfor;
+=======
+    <?php
+
+      for ($i=0; $i < 4; $i++):
+        $rows = 'article_' . $i;
+        // check if the repeater field has rows of data
+        if( have_rows($rows) ):
+
+        // loop through the rows of data
+        while ( have_rows($rows) ) : the_row();
+
+        $img = get_sub_field('article_image');
+        $title = get_sub_field('article_title');
+        $text = get_sub_field('article_text');
+        $link = get_sub_field('article_link');
+
+          if($img && $title && $text):
+    ?>
+
+      <article class="content__article">
+        <figure>
+          <img src="<?= $img ?>" alt="<?= $title ?>">
+        </figure>
+        <div class="content__article__text">
+          <h1><?= $title ?></h1>
+          <p><?= $text ?></p>
+          <?php if($link): ?>
+            <a
+              class="button-outline" 
+              href="<?= $link['url'] ?>"
+              target="<?= $link['target'] ? $link['target'] : 'self';?>"  
+            >
+              <?= $link['title'] ?>
+            </a>
+          <?php endif; ?>
+        </div>
+      </article>
+
+    <?php
+      endif;
+      endwhile;
+      endif;
+      endfor;
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     ?>
 
   <footer class="home__contact">

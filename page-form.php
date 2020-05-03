@@ -1,6 +1,10 @@
 <?php /* Template Name: Form */ ?>
 
+<<<<<<< HEAD
 <?php $logoColor = 'white'; $menuColor = 'blue'?>
+=======
+<?php $menuColor = 'blue'?>
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 <?php include 'core/header.php' ?>
 
 

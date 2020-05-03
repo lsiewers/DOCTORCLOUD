@@ -4,7 +4,11 @@
    */
 ?>
 
+<<<<<<< HEAD
 <?php $menuColor = 'blue'; ?>
+=======
+<?php $logoColor = 'blue'; ?>
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 <?php include 'core/header.php' ?>
 
 <main>
@@ -20,6 +24,7 @@
       <figure><img src="<?= get_field('disease_folder_image')['url'] ?>" alt="<?= get_field('disease_folder_image')['alt'] ?>"></figure>
     </main>
     <footer class="disease-detail__buttons">
+<<<<<<< HEAD
       <?php 
         $cats=get_the_category();
         if(get_locale() == 'nl_NL') {
@@ -45,6 +50,10 @@
           }
         ?>
       </a>
+=======
+      <a class="button" href="<?= get_permalink(); ?>">Back to overview</a>
+      <a class="button-outline" href="<?= get_bloginfo('wpurl'); ?>/contact">Make appointment</a>
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
     </footer>
   </article>
 </main>

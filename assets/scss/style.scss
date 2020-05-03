@@ -5,7 +5,13 @@
 @import 'pages/all';
 @import 'test/all';
 
+<<<<<<< HEAD
 * { box-sizing: border-box; }
+=======
+* {
+  box-sizing: border-box;
+}
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 
 body {
   max-width: 100vw;
@@ -17,12 +23,15 @@ body {
   }
 }
 
+<<<<<<< HEAD
 
 ::selection {
   color: white;
   background-color: $color-blue;
 }
 
+=======
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
 body, ul, figure, button {
   padding: 0;
   margin: 0;
@@ -40,11 +49,19 @@ button, a, input[type='submit'] {
   font-weight: 900;
 }
 
+<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
 }
 
 p, figcaption {
+=======
+h1, h2, h3, h4, h5, h6, a, button, figcaption {
+  font-family: $font-title;
+}
+
+p {
+>>>>>>> b25c3fab13219953bab46cdfa0090007470eb4d2
   font-family: $font-text;
   color: $color-blue;
   line-height: 1.6;
